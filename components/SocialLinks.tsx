@@ -11,7 +11,7 @@ const socialData = [
   {
     title: "Github",
     icon: <Github width={20} height={20} />,
-    link: "https://www.github.com",
+    link: "https://github.com/hillaryoyaro",
   },
   {
     title: "Linkedin",
