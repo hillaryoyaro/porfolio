@@ -1,4 +1,5 @@
-import { Facebook, Github, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Github, Instagram, Linkedin, Twitter,  X,  Youtube } from "lucide-react";
+import { FaXTwitter } from 'react-icons/fa6'; // This is the new Twitter "X" icon
 import Link from "next/link";
 import React from "react";
 
@@ -19,9 +20,9 @@ const socialData = [
     link: "https://www.github.com",
   },
   {
-    title: "Facebook",
-    icon: <Facebook width={20} height={20} />,
-    link: "https://www.github.com",
+    title: "X",
+    icon: < FaXTwitter width={20} height={20} />,
+    link: "https://twitter.com/hillaryoyaroh",
   },
   {
     title: "instagram",
