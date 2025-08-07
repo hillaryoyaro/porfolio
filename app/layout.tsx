@@ -7,34 +7,34 @@ import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "John Doe | Developer Portfolio",
+  title: "Hillary Oyaro | Software Engineer Portfolio",
   description:
-    "Explore the portfolio of John Doe, a skilled developer specializing in web development, UI/UX design, and modern JavaScript frameworks. View projects, services, and contact details.",
+    "Explore the portfolio of Hillary Oyaro, a skilled software engineer specializing in web development, Solution Architecture , and Entrepreneurship. View projects, services, and contact details.",
   keywords:
-    "developer portfolio, web developer, John Doe, UI/UX design, JavaScript, Next.js, frontend developer",
-  authors: [{ name: "John Doe" }],
+    "developer portfolio, web developer, Hillary Oyaro, software engineer, web development, Solution Architecture, JavaScript, Next.js, frontend developer, backend developer and cloud computing",
+  authors: [{ name: "Hillary Oyaro" }],
   robots: "index, follow",
   openGraph: {
     type: "website",
     url: "https://portfoliofive.reactbd.com/",
-    title: "John Doe | Developer Portfolio",
+    title: "Hillary Oyaro | Developer Portfolio",
     description:
-      "Discover John Doe's portfolio showcasing expertise in web development, UI/UX, and modern frameworks. Contact for services or collaboration.",
+      "Discover Hillary Oyaro's portfolio showcasing expertise in web development, Solution Architecture, and entrepreneurship. Contact for services or collaboration.",
     images: [
       {
         url: "https://portfoliofive.reactbd.com/assets/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "John Doe Portfolio Preview",
+        alt: "Hillary Oyaro Portfolio Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@YourTwitterHandle", // Replace with your Twitter handle
-    title: "John Doe | Developer Portfolio",
+    title: "Hillary Oyaro | Developer Portfolio",
     description:
-      "Check out John Doe's portfolio for web development and UI/UX design projects.",
+      "Check out Hillary Oyaro's portfolio for web development and Solution Architecture design projects.",
     images: ["https://portfoliofive.reactbd.com/assets/og-image.jpg"],
   },
   alternates: {
