@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const HomeDescription = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
   const description =
-    "s Software Engineer with strong DevOps expertise, focused on delivering high-performance eCommerce and blockchain technology solutions. Skilled in designing user-centric applications, automating cloud infrastructure, and maintaining resilient CI/CD workflows. ";
+    "s Entrepreneurial Software Engineer with DevOps mastery — building scalable, cloud-native solutions that power growth in eCommerce, dropshipping, blockchain, and AI/ML-driven platforms. ";
   const { displayedText, isComplete } = useTypewriter(description, 30);
 
   useEffect(() => {
