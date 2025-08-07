@@ -7,37 +7,37 @@ export const NavbarData = [
 ];
 
 export const statsData = [
-  { num: 12, text: "Years of experience" },
-  { num: 25, text: "Projects completed" },
-  { num: 8, text: "Technologies mastered" },
-  { num: 500, text: "Code commits" },
+  { num: 4, text: "Years of experience" },
+  { num: 15, text: "Projects completed" },
+  { num: 10, text: "Technologies mastered" },
+  { num: 505, text: "Code commits" },
 ];
 
 export const servicesData = [
   {
     _id: "01",
-    title: "Web Development",
+    title: "AI & ML",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus velit iste quisquam aut.",
     href: "https://www.youtube.com/@reactjsBD",
   },
   {
     _id: "02",
-    title: "App Development",
+    title: "DevOps Engineering",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus velit iste quisquam aut.",
     href: "https://www.youtube.com/@reactjsBD",
   },
   {
     _id: "03",
-    title: "UI/UX Design",
+    title: "Web Development",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus velit iste quisquam aut.",
     href: "https://www.youtube.com/@reactjsBD",
   },
   {
     _id: "04",
-    title: "Logo Design",
+    title: "Ecommerce & Blockchain",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus velit iste quisquam aut.",
     href: "https://www.youtube.com/@reactjsBD",

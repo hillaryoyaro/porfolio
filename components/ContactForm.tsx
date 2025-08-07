@@ -104,7 +104,7 @@ const ContactForm = () => {
   return (
     <form className="space-y-4">
       <h3 className="text-2xl md:text-4xl text-lightSky">
-        Let&apos;s work together
+        Let&apos;s build together
       </h3>
       <p className="text-white/60 text-sm md:text-base">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil velit
@@ -170,9 +170,10 @@ const ContactForm = () => {
                 <SelectContent className="bg-bodyColor text-white border-white/20">
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
+                    <SelectItem value="mst">Ecommerce and Blockchain</SelectItem>
                     <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="mst">Logo Design</SelectItem>
+                    <SelectItem value="cst">AI & ML</SelectItem>
+                    <SelectItem value="mst">DevOps Engineering</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
