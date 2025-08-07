@@ -14,32 +14,34 @@ export const statsData = [
 ];
 
 export const servicesData = [
-  {
+   {
     _id: "01",
+    title: "Ecommerce & Blockchain",
+    description:
+      "Building modern eCommerce platforms with seamless integration of trusted payment gateways like PayPal and M-Pesa. We enable secure, fast, and flexible transactions for global and local customers—bridging digital commerce with everyday convenience",
+    href: "https://emali.vercel.app/",
+  },
+      {
+    _id: "02",
     title: "AI & ML",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus velit iste quisquam aut.",
-    href: "https://www.youtube.com/@reactjsBD",
-  },
-  {
-    _id: "02",
-    title: "DevOps Engineering",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus velit iste quisquam aut.",
-    href: "https://www.youtube.com/@reactjsBD",
+      "Leverage the power of Artificial Intelligence and Machine Learning to drive intelligent automation, predictive analytics, and smarter decision-making. We help you integrate AI solutions that unlock insights from data and streamline business operations.",
+    href: "https://outering.vercel.app/",
   },
   {
     _id: "03",
+    title: "Cloud Solutions",
+    description:
+      "Transform your business with our cloud solutions. We design, deploy, and manage scalable cloud architectures that enhance performance, security, and cost-efficiency—empowering you to innovate faster and smarter.",
+    href: "https://outering.vercel.app/",
+  },
+
+   {
+    _id: "04",
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus velit iste quisquam aut.",
-    href: "https://www.youtube.com/@reactjsBD",
+      "Build fast, secure, and scalable web applications tailored to your business needs. From landing pages to full-stack platforms, we deliver responsive, cloud-integrated solutions that elevate user experience and drive growth.",
+    href: "https://outering.vercel.app/",
   },
-  {
-    _id: "04",
-    title: "Ecommerce & Blockchain",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, sequi distinctio minus esse consequatur fugit accusamus velit iste quisquam aut.",
-    href: "https://www.youtube.com/@reactjsBD",
-  },
+ 
 ];
