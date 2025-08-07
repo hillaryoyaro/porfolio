@@ -18,11 +18,11 @@ const tabContent = {
     title: "Professional Experience",
     items: [
       {
-        role: "Senior Frontend Developer",
-        company: "Tech Solutions Inc.",
-        period: "2021 - Present",
+        role: "DevOps Engineer",
+        company: "Emali Express Ltd.",
+        period: "2024 - Present",
         description:
-          "Led the development of multiple React-based web applications, improving performance by 40%. Mentored junior developers and implemented best practices for code quality.",
+          "Contributed to the development and deployment of web applications using Docker, GitHub Actions, and cloud platforms, resulting in a 40% boost in performance. Applied DevOps practices to ensure clean code, efficient delivery, and scalable infrastructure.",
         highlights: ["React", "Next.js", "TypeScript", "Team Leadership"],
       },
       {
