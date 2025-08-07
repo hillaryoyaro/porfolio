@@ -1,5 +1,5 @@
-import { Facebook, Github, Instagram, Linkedin, Twitter,  X,  Youtube } from "lucide-react";
-import { FaXTwitter } from 'react-icons/fa6'; // This is the new Twitter "X" icon
+import { Facebook, Github, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { FaXTwitter } from 'react-icons/fa6'; // X (Twitter rebrand)
 import Link from "next/link";
 import React from "react";
 
@@ -7,7 +7,7 @@ const socialData = [
   {
     title: "Youtube",
     icon: <Youtube width={20} height={20} />,
-    link: "https://www.github.com",
+    link: "https://youtube.com/@hillaryoyaro", // replace with your actual YouTube
   },
   {
     title: "Github",
@@ -17,32 +17,34 @@ const socialData = [
   {
     title: "Linkedin",
     icon: <Linkedin width={20} height={20} />,
-    link: "https://www.github.com",
+    link: "https://linkedin.com/in/hillaryoyaro", // update to your LinkedIn
   },
   {
     title: "X",
-    icon: < FaXTwitter width={20} height={20} />,
+    icon: <FaXTwitter size={20} />,
     link: "https://twitter.com/hillaryoyaroh",
   },
   {
-    title: "instagram",
+    title: "Instagram",
     icon: <Instagram width={20} height={20} />,
-    link: "https://www.github.com",
+    link: "https://instagram.com/hillaryoyaro", // update this
   },
 ];
 
 const SocialLinks = () => {
   return (
     <div className="flex items-center gap-3">
-      {socialData?.map((item) => (
-        <div
-          key={item?.title}
-          className="text-lightSky/80 border border-lightSky/30 p-2.5 rounded-full hover:bg-lightSky/10 hover:border-lightSky hover:text-lightSky hoverEffect"
+      {socialData.map((item) => (
+        <Link
+          key={item.title}
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <Link href={"https://www.github.com"} target="blank">
-            <span className="">{item?.icon}</span>
-          </Link>
-        </div>
+          <div className="text-lightSky/80 border border-lightSky/30 p-2.5 rounded-full hover:bg-lightSky/10 hover:border-lightSky hover:text-lightSky hoverEffect">
+            {item.icon}
+          </div>
+        </Link>
       ))}
     </div>
   );
