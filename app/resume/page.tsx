@@ -7,31 +7,55 @@ import { Calendar, GraduationCap, Briefcase, Code2, User } from "lucide-react";
 import Container from "@/components/Container";
 
 const tabMenu = [
+  { title: "About me", value: "about", icon: User },
   { title: "Experience", value: "experience", icon: Briefcase },
   { title: "Education", value: "education", icon: GraduationCap },
   { title: "Skills", value: "skills", icon: Code2 },
-  { title: "About me", value: "about", icon: User },
+  
 ];
 
 const tabContent = {
+   about: {
+    title: "About Me",
+    bio: "Passionate software developer with over 5 years of experience in building modern web applications. Committed to writing clean, maintainable code and staying current with emerging technologies. Strong advocate for user-centric design and accessibility.",
+    interests: [
+      "Open Source Contributing",
+      "Tech Blogging",
+      "UI/UX Design",
+      "Machine Learning",
+    ],
+    languages: ["English (Native)", "Spanish (Intermediate)", "German (Basic)"],
+  },
   experience: {
     title: "Professional Experience",
     items: [
+     {
+      role: "Co-founder & Software Engineer",
+      company: "Emali Express Ltd.",
+      period: "December 2024 – Present",
+      description:
+        "Led the end-to-end development of Emali Express, a full-featured modern eCommerce platform. Architected secure and scalable systems integrating PayPal, M-Pesa, and Stripe for seamless payments. Built robust inventory management, user authentication, and data protection layers to ensure compliance and user trust. Drove DevOps initiatives using Docker,Kubernetes, CI/CD pipelines, and cloud infrastructure for high availability and performance.",
+      highlights: [ "React","Next.js","TypeScript", "Stripe", "M-Pesa API","DevOps", "CI/CD","Cloud Deployment"],
+        },
+    
+   
       {
         role: "DevOps Engineer",
-        company: "Emali Express Ltd.",
-        period: "2024 - Present",
+        company: "Outer Ring Technologies",
+        period: "2021 - 2024",
         description:
-          "Contributed to the development and deployment of web applications using Docker, GitHub Actions, and cloud platforms, resulting in a 40% boost in performance. Applied DevOps practices to ensure clean code, efficient delivery, and scalable infrastructure.",
-        highlights: ["React", "Next.js", "TypeScript", "Team Leadership"],
+          "Developed and maintained web applications using React, Next.js, and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions. Implemented best practices in code quality and performance optimization.",
+        highlights: ["React", "Next.js", "Node.js", "AWS", "Agile Methodologies","GCP", "Docker", "Kubernetes"],
       },
+
+      
       {
-        role: "Full Stack Developer",
-        company: "Digital Innovations Ltd",
+        role: "Full Stack Engineer",
+        company: "Elloe AI",
         period: "2018 - 2021",
         description:
-          "Developed and maintained full-stack applications using modern JavaScript frameworks. Collaborated with cross-functional teams to deliver high-quality solutions.",
-        highlights: ["Node.js", "React", "MongoDB", "AWS"],
+          "Engineered conversational AI chatbot interfaces using React and TypeScript, enhancing user engagement through responsive and accessible designs. Developed and optimized backend systems with Node.js and MongoDB, reducing API latency and ensuring reliable integration with third-party services via RESTful APIs. Collaborated closely with cross-functional teams to deploy scalable solutions on AWS, contributing to the overall system reliability and performance.",
+        highlights: ["Node.js", "React", "MongoDB", "AWS","Vertica AI", "RESTful APIs", "TypeScript"],
       },
     ],
   },
@@ -85,17 +109,7 @@ const tabContent = {
       },
     ],
   },
-  about: {
-    title: "About Me",
-    bio: "Passionate software developer with over 5 years of experience in building modern web applications. Committed to writing clean, maintainable code and staying current with emerging technologies. Strong advocate for user-centric design and accessibility.",
-    interests: [
-      "Open Source Contributing",
-      "Tech Blogging",
-      "UI/UX Design",
-      "Machine Learning",
-    ],
-    languages: ["English (Native)", "Spanish (Intermediate)", "German (Basic)"],
-  },
+ 
 };
 
 export default function ResumePage() {
