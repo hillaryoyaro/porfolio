@@ -4,7 +4,7 @@ import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Github, ChevronLeft, ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { hover, motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -25,30 +25,36 @@ import Container from "@/components/Container";
 import projectOne from "@/images/projectOne.png";
 import projectTwo from "@/images/projectTwo.png";
 import projectThree from "@/images/projectThree.png";
+import mpesacheckout from "@/images/mpesacheckout.png"; // Import the hover image
+import outering from "@/images/outering.png"; // Import the hover image 
+import outering1 from "@/images/outering1.png";
 
 // Dummy data for projects
 const projects = [
   {
     id: "01",
-    title: "E-commerce Platform",
+    title: "Emali Express",
     category: "Full Stack",
     description:
-      "A modern e-commerce platform built with Next.js, featuring a responsive design, user authentication, and integration with a headless CMS for easy content management.",
-    stack: ["Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
+      "A modern e-commerce platform built with Next.js, featuring a responsive design, user authentication, and integration with a headless CMS for seamless content management. The platform supports trusted payment gateways including M-Pesa, Stripe, and PayPal, enabling secure and convenient transactions for both local and global customers.",
+    stack: ["Next.js", "MongodB", "Shadcn","Mpesa API",  "PayPal",, "Aws",],
     image: projectOne,
-    liveUrl: "https://example-ecommerce.com",
-    githubUrl: "https://github.com/example/ecommerce",
+    hoverImage: mpesacheckout,    // image shown on hover
+    liveUrl: "https://emali.vercel.app/",
+    githubUrl: "https://github.com/Outering-Inc/emaliexpress",
   },
   {
     id: "02",
-    title: "Task Management App",
+    title: "Outering",
     category: "Frontend",
     description:
-      "A sleek task management application that helps users organize their daily activities, set priorities, and track progress. Built with React and Redux for state management.",
-    stack: ["React", "Redux", "Styled Components", "Firebase"],
-    image: projectTwo,
-    liveUrl: "https://example-taskmanager.com",
-    githubUrl: "https://github.com/example/taskmanager",
+      "Outering is a multi-cloud platform providing tailored solutions on AWS, GCP, and Azure.We specialize in cloud-native architecture, DevOps, and infrastructure automation.Our services include cloud migration, CI/CD setup, and Kubernetes orchestration.We help clients build secure, scalable, and resilient applications.Enables faster deployment and smarter operations across environments.",
+      
+    stack: ["AWS", "GCP", "GitOps", "Kubernetes", "Terraform", "ArgoCD", "DevOps"],
+    image: outering1,
+    hoverImage: outering, // image shown on hover
+    liveUrl: "https://outering.vercel.app/",
+    githubUrl: "https://github.com/Outering-Inc/Outering",
   },
   {
     id: "03",
@@ -101,12 +107,18 @@ export default function ProjectSlider() {
                     <div className="flex flex-col md:flex-row md:items-center md:space-x-8">
                       <div className="w-full md:w-1/2 order-2 md:order-1 mb-8 md:mb-0">
                         <div className="space-y-3 md:space-y-6 mt-4 md:mt-0">
-                          <h2 className="text-4xl md:text-8xl leading-none font-extrabold text-transparent text-outline">
+                          <h2 className="text-2xl md:text-4xl leading-none font-extrabold text-transparent text-outline">
                             {project?.id}
                           </h2>
-                          <h3 className="text-xl md:text-3xl font-bold leading-none text-white group-hover:text-lightSky hoverEffect">
-                            {project?.category} project
+                            {/* Project Title */}
+                          <h3 className="text-2xl md:text-4xl font-bold text-white">
+                              {project?.title}
                           </h3>
+                           {/* Project Category */}
+                          <p className="text-lightSky text-sm md:text-base font-medium uppercase tracking-wide">
+                               {project?.category} Project
+                          </p>
+                           {/* Project Description */}
                           <p className="text-white/60 text-sm md:text-base leading-6 md:leading-normal">
                             {project?.description}
                           </p>
@@ -169,14 +181,23 @@ export default function ProjectSlider() {
                         </div>
                       </div>
                       <div className="w-full md:w-1/2 order-1 md:order-2">
-                        <div className="relative h-64 md:h-96 bg-gray-700 rounded-lg overflow-hidden">
-                          <Image
-                            src={project.image}
-                            alt={project.title}
-                            fill
-                            className="object-cover"
+                      <div className="relative h-64 md:h-96 bg-gray-700 rounded-lg overflow-hidden group">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+                        />
+                        {project.hoverImage && (
+                        <Image
+                          src={project.hoverImage}
+                          alt={`${project.title} - hover`}
+                          fill
+                          className="object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100 absolute top-0 left-0"
                           />
-                        </div>
+                        )}
+                      </div>
+
                       </div>
                     </div>
                   </CardContent>
