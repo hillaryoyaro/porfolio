@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, GraduationCap, Briefcase, Code2, User } from "lucide-react";
 import Container from "@/components/Container";
+import { ArrowUp } from "lucide-react";
+import Link from "next/link";
 
 const tabMenu = [
   { title: "About me", value: "about", icon: User },
@@ -17,35 +19,46 @@ const tabMenu = [
 const tabContent = {
    about: {
     title: "About Me",
-    bio: "Passionate software developer with over 5 years of experience in building modern web applications. Committed to writing clean, maintainable code and staying current with emerging technologies. Strong advocate for user-centric design and accessibility.",
+    bio: "Passionate software engineer with over 5 years of experience in building modern web applications. Committed to writing clean, maintainable code and staying current with emerging technologies. Strong advocate for user-centric design and accessibility.",
     interests: [
+      "Cloud Computing",
+      "Ecommerce ",
+      "AI & Machine Learning",
       "Open Source Contributing",
-      "Tech Blogging",
-      "UI/UX Design",
-      "Machine Learning",
+      "Blockchain & Web3",
+       "Cybersecurity",
+      "Fintech",
+      "Traveling",
+      "Photography",
+      "Reading Tech Blogs",
+      "Gaming",
+      
+      "Music Production",       
     ],
-    languages: ["English (Native)", "Spanish (Intermediate)", "German (Basic)"],
+    languages: ["English (Native)", "Kiswahili (Native)", "Arabic (Basic)"],
   },
   experience: {
     title: "Professional Experience",
     items: [
      {
       role: "Co-founder & Software Engineer",
-      company: "Emali Express Ltd.",
+      company: "EmaliExpress",
       period: "December 2024 – Present",
       description:
         "Led the end-to-end development of Emali Express, a full-featured modern eCommerce platform. Architected secure and scalable systems integrating PayPal, M-Pesa, and Stripe for seamless payments. Built robust inventory management, user authentication, and data protection layers to ensure compliance and user trust. Drove DevOps initiatives using Docker,Kubernetes, CI/CD pipelines, and cloud infrastructure for high availability and performance.",
       highlights: [ "React","Next.js","TypeScript", "Stripe", "M-Pesa API","DevOps", "CI/CD","Cloud Deployment"],
+      href: "https://emali.vercel.app/",
         },
     
    
       {
         role: "DevOps Engineer",
-        company: "Outer Ring Technologies",
+        company: "Outering",
         period: "2021 - 2024",
         description:
           "Developed and maintained web applications using React, Next.js, and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions. Implemented best practices in code quality and performance optimization.",
         highlights: ["React", "Next.js", "Node.js", "AWS", "Agile Methodologies","GCP", "Docker", "Kubernetes"],
+        href: "https://outering.vercel.app/",
       },
 
       
@@ -56,6 +69,7 @@ const tabContent = {
         description:
           "Engineered conversational AI chatbot interfaces using React and TypeScript, enhancing user engagement through responsive and accessible designs. Developed and optimized backend systems with Node.js and MongoDB, reducing API latency and ensuring reliable integration with third-party services via RESTful APIs. Collaborated closely with cross-functional teams to deploy scalable solutions on AWS, contributing to the overall system reliability and performance.",
         highlights: ["Node.js", "React", "MongoDB", "AWS","Vertica AI", "RESTful APIs", "TypeScript"],
+        href: "https://www.elloe.ai/",
       },
     ],
   },
@@ -63,17 +77,17 @@ const tabContent = {
     title: "Educational Background",
     items: [
       {
-        degree: "Master of Computer Science",
-        institution: "Tech University",
-        period: "2016 - 2018",
+        degree: "Software Engineering(Bootcamp)",
+        institution: "Alx Africa",
+        period: "February 2022 - April 2023",
         description:
-          "Specialized in Software Engineering and Artificial Intelligence. Graduated with honors.",
+          "Specialized in Backend Software Engineering and Artificial Intelligence. Focused on building scalable web applications and mastering AI technologies.",
         achievements: ["4.0 GPA", "Research Publication", "Dean's List"],
       },
       {
-        degree: "Bachelor of Computer Science",
-        institution: "State University",
-        period: "2012 - 2016",
+        degree: "Bachelor of Mathematics and Computer Science",
+        institution: "Taita Taveta University",
+        period: "2014 - 2019",
         description:
           "Foundation in computer science principles, data structures, and algorithms.",
         achievements: ["Academic Excellence Award", "Programming Club Lead"],
@@ -163,9 +177,15 @@ export default function ResumePage() {
                       <div className="flex justify-between items-start mb-4">
                         <div>
                           <h3 className="text-lg font-semibold">{item.role}</h3>
-                          <p className="text-muted-foreground">
-                            {item.company}
-                          </p>
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          <span>{item.company}</span>
+                            {item.href && (
+                              <Link href={item.href} target="_blank" rel="noopener noreferrer">
+                                <ArrowUp className="rotate-45 h-4 w-4 hover:text-lightSky transition-colors" />
+                              </Link>
+                            )}
+                        </div>
+
                         </div>
                         <div className="flex items-center text-muted-foreground">
                           <Calendar className="h-4 w-4 mr-2" />
