@@ -107,8 +107,7 @@ const ContactForm = () => {
         Let&apos;s build together
       </h3>
       <p className="text-white/60 text-sm md:text-base">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil velit
-        vel saepe fugiat ex aperiam, totam quae et tenetur deleniti.
+      Have an idea, a project, or need a developer who gets things done? Whether you're looking to collaborate on exciting work, build impactful projects, or need support refining your digital presence, I’m here to help.
       </p>
       <>
         {success ? (

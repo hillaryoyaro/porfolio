@@ -23,7 +23,6 @@ import {
 } from "@/components/ui/carousel";
 import Container from "@/components/Container";
 import projectOne from "@/images/projectOne.png";
-import projectTwo from "@/images/projectTwo.png";
 import projectThree from "@/images/projectThree.png";
 import mpesacheckout from "@/images/mpesacheckout.png"; // Import the hover image
 import outering from "@/images/outering.png"; // Import the hover image 
