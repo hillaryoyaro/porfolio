@@ -3,18 +3,19 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, GraduationCap, Briefcase, Code2, User } from "lucide-react";
+import { Calendar, GraduationCap, Briefcase, Code2, User, Award } from "lucide-react";
 import Container from "@/components/Container";
 import { ArrowUp } from "lucide-react";
 import Link from "next/link";
-import { matchesGlob } from "path/posix";
+
+
 
 const tabMenu = [
   { title: "About me", value: "about", icon: User },
   { title: "Experience", value: "experience", icon: Briefcase },
   { title: "Education", value: "education", icon: GraduationCap },
   { title: "Skills", value: "skills", icon: Code2 },
-  
+  { title: "Certifications", value: "certification", icon: Award },
 ];
 
 const tabContent = {
@@ -69,7 +70,7 @@ const tabContent = {
         period: "2018 - 2021",
         description:
           "Engineered conversational AI chatbot interfaces using React and TypeScript, enhancing user engagement through responsive and accessible designs. Developed and optimized backend systems with Node.js and MongoDB, reducing API latency and ensuring reliable integration with third-party services via RESTful APIs. Collaborated closely with cross-functional teams to deploy scalable solutions on AWS, contributing to the overall system reliability and performance.",
-        highlights: ["Node.js", "React", "MongoDB", "AWS","Vertica AI", "RESTful APIs", "TypeScript"],
+        highlights: ["Node.js", "React", "MongoDB", "AWS","Generative AI", "RESTful APIs", "TypeScript"],
         href: "https://www.elloe.ai/",
       },
     ],
@@ -125,6 +126,39 @@ const tabContent = {
           "Hands-on experience deploying and managing applications in cloud environments. Skilled in containerization, CI/CD pipelines, and infrastructure automation to ensure scalability, reliability, and rapid delivery of software.  ",
         skills: ["AWS","GCP","Git","GitOps","GitActions", "Docker","Kubernetes", "Terraform","Jenkins", "Jenkins Pipeline", "Ansible", "ArgoCD", "CI/CD", "Agile Methodologies"],
       },
+    ],
+  },
+  certification: {
+    title: "Certifications & Achievements",
+    items: [
+      {
+        certificate: "LFS250: Kubernetes and Cloud Native Essentials",
+        institution: "Linux Foundation",
+        period: "May 2025 - Present",
+        description:
+          "Introduction to Kubernetes and cloud-native tools, covering architecture, container orchestration, and CNCF projects, with hands-on deployment and scaling experience.",
+        skills: ["CI/CD", "Kubernetes", "Docker","Container","GitOps","Monitoring","Logging","Security","Networking","Storage","Orchestration","Automation","Observability","Service Mesh","Serverless","Multi-Cloud"],
+        href: "https://www.credly.com/badges/ad605dfd-62d5-43a7-87f0-a0738a199c21",
+      },
+        {
+        certificate: "AWS Certified Cloud Practitioner",
+        institution: "AWS",
+        period: "July 2022 - July 2025",
+        description:
+          "Validated foundational knowledge of AWS Cloud concepts, core services, security, architecture, pricing, and support. Gained skills in deploying and managing cloud solutions, understanding shared responsibility models, and applying best practices for cost optimization, scalability, and reliability within AWS environments.",
+        skills: ["AWS Cloud Concepts", "EC2", "S3","RDS", "Lambda", "VPC",  "CloudFormation", "Team Collaboration","IAM","AWS CLI","Security Best Practices","Cost Optimization","Scalability & Reliability","Networking in AWS","Monitoring & Logging","Serverless Architecture","Recoverbility","Networking","Storage","Observability","Automation","Monitoring & Logging","Shared Responsibility Model"],
+        href: "https://www.credly.com/badges/ad63297b-e489-4cd1-b714-5041f1366728/public_url",
+      },
+      {
+        certificate: "Software Engineering",
+        institution: "Alx Africa",
+        period: "Feb 2022 - April 2023",
+        description:
+          "Completed an intensive, project-based program in software engineering with a strong foundation in computer science principles. Gained proficiency in data structures, algorithms, and full-stack development, while honing problem-solving and collaboration skills through real-world projects.",
+        skills: ["Data Structures", "Algorithms", "Full-Stack Development","Object-Oriented Programming", "Database Management",  "API Development", "Team Collaboration","Debugging & Testing","Responsive Web Design","RESTful APIs","System Design","Software Documentation"],
+        href: "https://drive.google.com/file/d/1Swk8GChUblBTIEHUaECGK5n8Tx17wtrZ/view/",
+      },
+    
     ],
   },
  
@@ -281,6 +315,54 @@ export default function ResumePage() {
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {category.skills.map((skill, i) => (
+                          <Badge key={i} variant="secondary">
+                            {skill}
+                          </Badge>
+                        ))}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </TabsContent>
+              <TabsContent value="certification">
+                <motion.h2
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-2xl font-bold mb-6 text-lightSky"
+                >
+                  {tabContent.certification.title}
+                </motion.h2>
+                <div className="space-y-6">
+                  {tabContent.certification.items.map((item, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="border rounded-lg border-lightSky/20 p-6"
+                    >
+                      <div className="flex justify-between items-start mb-4">
+                        <div>
+                          <h3 className="text-lg font-semibold">
+                            {item.certificate}
+                          </h3>
+                         <div className="flex items-center gap-2 text-muted-foreground">
+                          <span>{item.institution}</span>
+                            {item.href && (
+                              <Link href={item.href} target="_blank" rel="noopener noreferrer">
+                                <ArrowUp className="rotate-45 h-4 w-4 hover:text-lightSky transition-colors" />
+                              </Link>
+                            )}
+                        </div>
+                        </div>
+                        <div className="flex items-center text-muted-foreground">
+                          <Calendar className="h-4 w-4 mr-2" />
+                          {item.period}
+                        </div>
+                      </div>
+                      <p className="mb-4">{item.description}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {item.skills.map((skill, i) => (
                           <Badge key={i} variant="secondary">
                             {skill}
                           </Badge>
