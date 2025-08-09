@@ -7,6 +7,7 @@ import { Calendar, GraduationCap, Briefcase, Code2, User } from "lucide-react";
 import Container from "@/components/Container";
 import { ArrowUp } from "lucide-react";
 import Link from "next/link";
+import { matchesGlob } from "path/posix";
 
 const tabMenu = [
   { title: "About me", value: "about", icon: User },
@@ -82,15 +83,17 @@ const tabContent = {
         period: "February 2022 - April 2023",
         description:
           "Specialized in Backend Software Engineering and Artificial Intelligence. Focused on building scalable web applications and mastering AI technologies.",
-        achievements: ["4.0 GPA", "Research Publication", "Dean's List"],
+        achievements: ["ALX Backend & AI Certified", "Research Publication", "Backend & AI tech mastery","Open Source Contributor","Community Mentor","Promnt Engineer",],
+        href: "https://www.alxafrica.com/",
       },
       {
         degree: "Bachelor of Mathematics and Computer Science",
         institution: "Taita Taveta University",
         period: "2014 - 2019",
         description:
-          "Foundation in computer science principles, data structures, and algorithms.",
-        achievements: ["Academic Excellence Award", "Programming Club Lead"],
+          "Developed a strong foundation in computer science principles, with proficiency in data structures, algorithms, and problem-solving methodologies essential for efficient software development.",
+        achievements: ["Second Class Honours","Specialization in Applied Mathematics and Computer Science", "Programming Club Member",  "Research Project on Mathematical Algorithms", "Community Service"],
+        href: "https://www.ttu.ac.ke/",
       },
     ],
   },
@@ -100,11 +103,12 @@ const tabContent = {
       {
         name: "Frontend Development",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum dolor, impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
+          " Experienced in crafting responsive, accessible, and high-performance user interfaces using modern JavaScript frameworks. Skilled at translating UI/UX designs into interactive, pixel-perfect web applications with seamless user experiences.",
         skills: [
           "React",
           "Next.js",
           "TypeScript",
+          "Shadcn UI",
           "Tailwind CSS",
           "Framer Motion",
         ],
@@ -112,14 +116,14 @@ const tabContent = {
       {
         name: "Backend Development",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum dolor, impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
-        skills: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB"],
+          "Proficient in building robust, scalable, and secure backend systems. Expertise in designing RESTful APIs, implementing authentication, optimizing database queries, and ensuring smooth integration between server and client applications.",
+        skills: ["Node.js", "Express", "Python","FastAPI", "PostgreSQL", "MongoDB"],
       },
       {
-        name: "Tools & Others",
+        name: "Cloud & DevOps",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum dolor, impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
-        skills: ["Git", "Docker", "AWS", "CI/CD", "Agile Methodologies"],
+          "Hands-on experience deploying and managing applications in cloud environments. Skilled in containerization, CI/CD pipelines, and infrastructure automation to ensure scalability, reliability, and rapid delivery of software.  ",
+        skills: ["AWS","GCP","Git","GitOps","GitActions", "Docker","Kubernetes", "Terraform","Jenkins", "Jenkins Pipeline", "Ansible", "ArgoCD", "CI/CD", "Agile Methodologies"],
       },
     ],
   },
@@ -226,9 +230,14 @@ export default function ResumePage() {
                           <h3 className="text-lg font-semibold">
                             {item.degree}
                           </h3>
-                          <p className="text-muted-foreground">
-                            {item.institution}
-                          </p>
+                         <div className="flex items-center gap-2 text-muted-foreground">
+                          <span>{item.institution}</span>
+                            {item.href && (
+                              <Link href={item.href} target="_blank" rel="noopener noreferrer">
+                                <ArrowUp className="rotate-45 h-4 w-4 hover:text-lightSky transition-colors" />
+                              </Link>
+                            )}
+                        </div>
                         </div>
                         <div className="flex items-center text-muted-foreground">
                           <Calendar className="h-4 w-4 mr-2" />
