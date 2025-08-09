@@ -9,19 +9,18 @@ import { ArrowUp } from "lucide-react";
 import Link from "next/link";
 
 
-
 const tabMenu = [
   { title: "About me", value: "about", icon: User },
   { title: "Experience", value: "experience", icon: Briefcase },
-  { title: "Education", value: "education", icon: GraduationCap },
   { title: "Skills", value: "skills", icon: Code2 },
+  { title: "Education", value: "education", icon: GraduationCap },
   { title: "Certifications", value: "certification", icon: Award },
 ];
 
 const tabContent = {
    about: {
     title: "About Me",
-    bio: "Passionate software engineer with over 5 years of experience in building modern web applications. Committed to writing clean, maintainable code and staying current with emerging technologies. Strong advocate for user-centric design and accessibility.",
+    bio: "Passionate software engineer with over 5 years of experience in building modern web applications. Committed to writing clean, maintainable code and staying current with emerging technologies. Strong advocate for cloud native applications.",
     interests: [
       "Cloud Computing",
       "Ecommerce ",
@@ -45,6 +44,7 @@ const tabContent = {
      {
       role: "Co-founder & Software Engineer",
       company: "EmaliExpress",
+      logo: "/images/emaliLogo.png",
       period: "December 2024 – Present",
       description:
         "Led the end-to-end development of Emali Express, a full-featured modern eCommerce platform. Architected secure and scalable systems integrating PayPal, M-Pesa, and Stripe for seamless payments. Built robust inventory management, user authentication, and data protection layers to ensure compliance and user trust. Drove DevOps initiatives using Docker,Kubernetes, CI/CD pipelines, and cloud infrastructure for high availability and performance.",
@@ -56,9 +56,11 @@ const tabContent = {
       {
         role: "DevOps Engineer",
         company: "Outering",
-        period: "2021 - 2024",
+        logo: "/images/outeringLogo.png",
+        period: "September 2023 - December 2024",
         description:
-          "Developed and maintained web applications using React, Next.js, and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions. Implemented best practices in code quality and performance optimization.",
+          "Migrated multi-project architecture to AWS with CyberPanel, reducing downtime and boosting performance.Created detailed deployment documentation, streamlining team adoption.Built secure authentication with Next.js and Google Auth APIs on GCP.Enhanced login success rates while minimizing unauthorized access attempts",
+
         highlights: ["React", "Next.js", "Node.js", "AWS", "Agile Methodologies","GCP", "Docker", "Kubernetes"],
         href: "https://outering.vercel.app/",
       },
@@ -67,7 +69,8 @@ const tabContent = {
       {
         role: "Full Stack Engineer",
         company: "Elloe AI",
-        period: "2018 - 2021",
+        logo: "/images/elloeLogo.png",
+        period: "May 2023 - May 2024",
         description:
           "Engineered conversational AI chatbot interfaces using React and TypeScript, enhancing user engagement through responsive and accessible designs. Developed and optimized backend systems with Node.js and MongoDB, reducing API latency and ensuring reliable integration with third-party services via RESTful APIs. Collaborated closely with cross-functional teams to deploy scalable solutions on AWS, contributing to the overall system reliability and performance.",
         highlights: ["Node.js", "React", "MongoDB", "AWS","Generative AI", "RESTful APIs", "TypeScript"],
@@ -81,6 +84,7 @@ const tabContent = {
       {
         degree: "Software Engineering(Bootcamp)",
         institution: "Alx Africa",
+        logo: "/images/alxLogo.png",
         period: "February 2022 - April 2023",
         description:
           "Specialized in Backend Software Engineering and Artificial Intelligence. Focused on building scalable web applications and mastering AI technologies.",
@@ -90,7 +94,8 @@ const tabContent = {
       {
         degree: "Bachelor of Mathematics and Computer Science",
         institution: "Taita Taveta University",
-        period: "2014 - 2019",
+        logo: "/images/taitaLogo.png",
+        period: "2014 -November 2018",
         description:
           "Developed a strong foundation in computer science principles, with proficiency in data structures, algorithms, and problem-solving methodologies essential for efficient software development.",
         achievements: ["Second Class Honours","Specialization in Applied Mathematics and Computer Science", "Programming Club Member",  "Research Project on Mathematical Algorithms", "Community Service"],
@@ -212,24 +217,38 @@ export default function ResumePage() {
                       transition={{ delay: index * 0.1 }}
                       className="border rounded-lg border-lightSky/20 p-6"
                     >
-                      <div className="flex justify-between items-start mb-4">
-                        <div>
-                          <h3 className="text-lg font-semibold">{item.role}</h3>
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="text-lg font-semibold">{item.role}</h3>
                         <div className="flex items-center gap-2 text-muted-foreground">
+                          {/* Logo */}
+                          {item.logo && (
+                            <img
+                              src={item.logo}
+                              alt={`${item.company} logo`}
+                              className="w-10 h-10 object-contain bg-black"
+                              />
+                          )}
+                          {/* Company Name */}
                           <span>{item.company}</span>
-                            {item.href && (
-                              <Link href={item.href} target="_blank" rel="noopener noreferrer">
-                                <ArrowUp className="rotate-45 h-4 w-4 hover:text-lightSky transition-colors" />
-                              </Link>
-                            )}
-                        </div>
+                        {/* External Link */}
+                        {item.href && (
+                        <Link
+                           href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                        <ArrowUp className="rotate-45 h-4 w-4 hover:text-lightSky transition-colors" />
+                        </Link>
+                    )}
+                    </div>
+                  </div>
+                <div className="flex items-center text-muted-foreground">
+                <Calendar className="h-4 w-4 mr-2" />
+                  {item.period}
+                </div>
+                     </div>
 
-                        </div>
-                        <div className="flex items-center text-muted-foreground">
-                          <Calendar className="h-4 w-4 mr-2" />
-                          {item.period}
-                        </div>
-                      </div>
                       <p className="mb-4">{item.description}</p>
                       <div className="flex flex-wrap gap-2">
                         {item.highlights.map((highlight, i) => (
@@ -259,25 +278,37 @@ export default function ResumePage() {
                       transition={{ delay: index * 0.1 }}
                       className="border rounded-lg border-lightSky/20 p-6"
                     >
-                      <div className="flex justify-between items-start mb-4">
-                        <div>
-                          <h3 className="text-lg font-semibold">
-                            {item.degree}
-                          </h3>
-                         <div className="flex items-center gap-2 text-muted-foreground">
+                     <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="text-lg font-semibold">{item.degree}</h3>
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          {/* Logo */}
+                          {item.logo && (
+                            <img
+                              src={item.logo}
+                              alt={`${item.institution} logo`}
+                              className="w-10 h-10 object-contain bg-white rounded-full"
+                              />
+                          )}
+                          {/* Institution Name */}
                           <span>{item.institution}</span>
-                            {item.href && (
-                              <Link href={item.href} target="_blank" rel="noopener noreferrer">
-                                <ArrowUp className="rotate-45 h-4 w-4 hover:text-lightSky transition-colors" />
-                              </Link>
-                            )}
-                        </div>
-                        </div>
-                        <div className="flex items-center text-muted-foreground">
-                          <Calendar className="h-4 w-4 mr-2" />
-                          {item.period}
-                        </div>
-                      </div>
+                        {/* External Link */}
+                        {item.href && (
+                        <Link
+                           href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                        <ArrowUp className="rotate-45 h-4 w-4 hover:text-lightSky transition-colors" />
+                        </Link>
+                    )}
+                    </div>
+                  </div>
+                <div className="flex items-center text-muted-foreground">
+                <Calendar className="h-4 w-4 mr-2" />
+                  {item.period}
+                </div>
+                     </div>
                       <p className="mb-4">{item.description}</p>
                       <div className="flex flex-wrap gap-2">
                         {item.achievements.map((achievement, i) => (

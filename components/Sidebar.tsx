@@ -33,7 +33,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </button>
       </div>
       <nav className="flex flex-col px-5 gap-7 text-sm uppercase tracking-wide font-medium mt-2">
-        <Logo title="John" subtitle="." />
+        <Logo title="Hillary" subtitle="." />
         {NavbarData.map((item) => (
           <Link
             key={item.title}

@@ -11,12 +11,15 @@ const Statistics = () => {
             key={index}
             className="flex flex-1 gap-2 md:gap-4 flex-col md:flex-row items-center justify-center lg:justify-start"
           >
-            <CountUp
-              end={item.num}
-              duration={5}
-              delay={2}
-              className="text-4xl lg:text-6xl font-extrabold"
-            />
+            <div className="flex items-center">
+              <CountUp
+                end={item.num}
+                duration={5}
+                delay={2}
+                className="text-4xl lg:text-6xl font-extrabold"
+              />
+              <span className="text-4xl lg:text-6xl font-extrabold">+</span>
+            </div>
             <p
               className={`${
                 item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"

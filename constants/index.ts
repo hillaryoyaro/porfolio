@@ -10,7 +10,7 @@ export const statsData = [
   { num: 4, text: "Years of experience" },
   { num: 15, text: "Projects completed" },
   { num: 10, text: "Technologies mastered" },
-  { num: 505, text: "Code commits" },
+  { num: 1000 , text: "Code commits" },
 ];
 
 export const servicesData = [
