@@ -139,6 +139,7 @@ const tabContent = {
       {
         certificate: "LFS250: Kubernetes and Cloud Native Essentials",
         institution: "Linux Foundation",
+        logo: "/images/linux.png",
         period: "May 2025 - Present",
         description:
           "Introduction to Kubernetes and cloud-native tools, covering architecture, container orchestration, and CNCF projects, with hands-on deployment and scaling experience.",
@@ -148,6 +149,7 @@ const tabContent = {
         {
         certificate: "AWS Certified Cloud Practitioner",
         institution: "AWS",
+        logo: "/images/aws.png",
         period: "July 2022 - July 2025",
         description:
           "Validated foundational knowledge of AWS Cloud concepts, core services, security, architecture, pricing, and support. Gained skills in deploying and managing cloud solutions, understanding shared responsibility models, and applying best practices for cost optimization, scalability, and reliability within AWS environments.",
@@ -157,13 +159,24 @@ const tabContent = {
       {
         certificate: "Software Engineering",
         institution: "Alx Africa",
+        logo: "/images/alx.png",
         period: "Feb 2022 - April 2023",
         description:
           "Completed an intensive, project-based program in software engineering with a strong foundation in computer science principles. Gained proficiency in data structures, algorithms, and full-stack development, while honing problem-solving and collaboration skills through real-world projects.",
         skills: ["Data Structures", "Algorithms", "Full-Stack Development","Object-Oriented Programming", "Database Management",  "API Development", "Team Collaboration","Debugging & Testing","Responsive Web Design","RESTful APIs","System Design","Software Documentation"],
-        href: "https://drive.google.com/file/d/1Swk8GChUblBTIEHUaECGK5n8Tx17wtrZ/view/",
+        href: "https://drive.google.com/file/d/1Swk8GChUblBTIEHUaECGK5n8Tx17wtrZ/view",
       },
-    
+       {
+        certificate: "Mathematics and Computer Science",
+        institution: "Taita Taveta University",
+        logo: "/images/taita.png",
+        period: "Sept 2013 - Nov 2018",
+        description:
+          "Earned a degree combining advanced mathematics with core computer science concepts. Developed strong analytical and problem-solving skills through coursework in algorithms, data structures, and mathematical modeling. Applied theoretical knowledge to practical projects in programming, database systems, and software engineering.",
+        skills: ["Mathematical Modeling","Data Structures", "Algorithms", "Software Engineering","Programming (Java, Python,C, C++)", "Database Management",  "Numerical Analysis", "Statistics","Problem Solving", "Team Collaboration","Discrete Mathematics","System Design","Calculus","Linear Algebra","Software Development Life Cycle (SDLC)","Fluid Mechanics","Computer Networks","Operating Systems", "Computer Architecture","Communication Skills","Research & Analysis"],
+        href: "https://drive.google.com/file/d/1ztT94UmTmeK_HASrqDAYOTDFKRnztD8s/view?usp=sharing",
+      },
+
     ],
   },
  
@@ -372,25 +385,37 @@ export default function ResumePage() {
                       transition={{ delay: index * 0.1 }}
                       className="border rounded-lg border-lightSky/20 p-6"
                     >
-                      <div className="flex justify-between items-start mb-4">
-                        <div>
-                          <h3 className="text-lg font-semibold">
-                            {item.certificate}
-                          </h3>
-                         <div className="flex items-center gap-2 text-muted-foreground">
+                         <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="text-lg font-semibold">{item.certificate}</h3>
+                        <div className="flex items-center gap-2 text-muted-foreground">
+                          {/* Logo */}
+                          {item.logo && (
+                            <img
+                              src={item.logo}
+                              alt={`${item.institution} logo`}
+                              className="w-10 h-10 object-contain bg-white "
+                              />
+                          )}
+                          {/* Institution Name */}
                           <span>{item.institution}</span>
-                            {item.href && (
-                              <Link href={item.href} target="_blank" rel="noopener noreferrer">
-                                <ArrowUp className="rotate-45 h-4 w-4 hover:text-lightSky transition-colors" />
-                              </Link>
-                            )}
-                        </div>
-                        </div>
-                        <div className="flex items-center text-muted-foreground">
-                          <Calendar className="h-4 w-4 mr-2" />
-                          {item.period}
-                        </div>
-                      </div>
+                        {/* External Link */}
+                        {item.href && (
+                        <Link
+                           href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                        <ArrowUp className="rotate-45 h-4 w-4 hover:text-lightSky transition-colors" />
+                        </Link>
+                    )}
+                    </div>
+                  </div>
+                <div className="flex items-center text-muted-foreground">
+                <Calendar className="h-4 w-4 mr-2" />
+                  {item.period}
+                </div>
+                     </div>
                       <p className="mb-4">{item.description}</p>
                       <div className="flex flex-wrap gap-2">
                         {item.skills.map((skill, i) => (
