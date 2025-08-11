@@ -12,12 +12,10 @@ export default function Home() {
     <div>
       <Container className="py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="flex flex-col items-center md:items-start gap-5 md:gap-7 text-center md:text-start">
-          <div>
-            <h3 className="font-semibold text-white/70 tracking-wider mb-1">
-              Software Engineer
-            </h3>
-            <h2 className="text-3xl md:text-5xl mb-2">Hello I&apos;m</h2>
-            <h1 className="text-lightSky text-5xl md:text-7xl tracking-normal">
+          <div className=" ">
+           
+            <h2 className="text-2xl md:text-4xl mb-0 ">Hello I&apos;m</h2>
+            <h1 className="text-lightSky text-3xl md:text-5xl tracking-normal">
               Mr.Oyaro
             </h1>
           </div>

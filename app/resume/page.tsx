@@ -7,6 +7,8 @@ import { Calendar, GraduationCap, Briefcase, Code2, User, Award } from "lucide-r
 import Container from "@/components/Container";
 import { ArrowUp } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+
 
 
 const tabMenu = [
@@ -20,21 +22,22 @@ const tabMenu = [
 const tabContent = {
    about: {
     title: "About Me",
-    bio: "Passionate software engineer with over 5 years of experience in building modern web applications. Committed to writing clean, maintainable code and staying current with emerging technologies. Strong advocate for cloud native applications.",
+    image: "/images/hillary.png",
+    bio: "I’m an Entrepreneurial Software Engineer with over 4+ years of experience in building modern, scalable, cloud-native applications. My expertise spans DevOps, cloud computing, and full-stack development , delivering solutions that power growth in eCommerce, dropshipping, fintech, blockchain, and AI/ML-driven platforms.Committed to designing and building resilient applications, writing clean and maintainable code, and staying at the forefront of emerging technologies. A Strong advocate for cloud native applications.",
+
     interests: [
       "Cloud Computing",
       "Ecommerce ",
       "AI & Machine Learning",
       "Open Source Contributing",
       "Blockchain & Web3",
-       "Cybersecurity",
+      "Cybersecurity",
       "Fintech",
       "Traveling",
       "Photography",
       "Reading Tech Blogs",
       "Gaming",
-      
-      "Music Production",       
+      "Health & Fitness",       
     ],
     languages: ["English (Native)", "Kiswahili (Native)", "Arabic (Basic)"],
   },
@@ -429,43 +432,54 @@ export default function ResumePage() {
                 </div>
               </TabsContent>
               <TabsContent value="about">
-                <motion.h2
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-2xl font-bold mb-6 text-lightSky"
-                >
-                  {tabContent.about.title}
-                </motion.h2>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="border rounded-lg border-lightSky/20 p-6"
-                >
-                  <p className="mb-6 text-lg">{tabContent.about.bio}</p>
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">Interests</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {tabContent.about.interests.map((interest, i) => (
-                          <Badge key={i} variant="secondary">
-                            {interest}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">Languages</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {tabContent.about.languages.map((language, i) => (
-                          <Badge key={i} variant="secondary">
-                            {language}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              </TabsContent>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="flex items-center gap-4 mb-6"
+              >
+              <Image
+                src={tabContent.about.image}
+                alt={tabContent.about.title}
+                width={64}
+                height={64}
+                className="rounded-full object-cover"
+              />
+              <h2 className="text-2xl font-bold text-lightSky">
+                {tabContent.about.title}
+              </h2>
+            </motion.div>
+
+          <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="border rounded-lg border-lightSky/20 p-6"
+          >
+          <p className="mb-6 text-lg">{tabContent.about.bio}</p>
+          <div className="space-y-4">
+        <div>
+          <h3 className="text-lg font-semibold mb-2">Interests</h3>
+          <div className="flex flex-wrap gap-2">
+          {tabContent.about.interests.map((interest, i) => (
+            <Badge key={i} variant="secondary">
+              {interest}
+            </Badge>
+          ))}
+        </div>
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold mb-2">Languages</h3>
+        <div className="flex flex-wrap gap-2">
+          {tabContent.about.languages.map((language, i) => (
+            <Badge key={i} variant="secondary">
+              {language}
+            </Badge>
+          ))}
+        </div>
+      </div>
+    </div>
+  </motion.div>
+</TabsContent>
+
             </div>
           </Tabs>
         </motion.div>

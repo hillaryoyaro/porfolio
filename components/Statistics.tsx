@@ -18,7 +18,7 @@ const Statistics = () => {
                 delay={2}
                 className="text-4xl lg:text-6xl font-extrabold"
               />
-              <span className="text-4xl lg:text-6xl font-extrabold">+</span>
+              <span className="text-3xl lg:text-5xl font-extrabold">+</span>
             </div>
             <p
               className={`${
