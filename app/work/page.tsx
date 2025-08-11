@@ -22,11 +22,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Container from "@/components/Container";
-import projectOne from "@/images/projectOne.png";
-import projectThree from "@/images/projectThree.png";
-import mpesacheckout from "@/images/mpesacheckout.png"; // Import the hover image
-import outering from "@/images/outering.png"; // Import the hover image 
-import outering1 from "@/images/outering1.png";
+import emaliexpress from "@/public/images/emaliexpress.png"; // Import the main image
+import mpesacheckout from "@/public/images/mpesacheckout.png"; // Import the hover image
+import outering from "@/public/images/outering.png"; // Import the hover image 
+import outering1 from "@/public/images/outering1.png";
+import amazonClone from "@/public/images/amazonClone.png"; // Import the  image/images/amazonClone.png"; 
+import amazonCI from "@/public/images/amazonCI.png"; // Import the hover image
 
 // Dummy data for projects
 const projects = [
@@ -37,7 +38,7 @@ const projects = [
     description:
       "A modern e-commerce platform built with Next.js, featuring a responsive design, user authentication, and integration with a headless CMS for seamless content management. The platform supports trusted payment gateways including M-Pesa, Stripe, and PayPal, enabling secure and convenient transactions for both local and global customers.",
     stack: ["Next.js", "MongodB", "Shadcn","Mpesa API",  "PayPal",, "Aws",],
-    image: projectOne,
+    image: emaliexpress, // main image
     hoverImage: mpesacheckout,    // image shown on hover
     liveUrl: "https://emali.vercel.app/",
     githubUrl: "https://github.com/Outering-Inc/emaliexpress",
@@ -57,12 +58,13 @@ const projects = [
   },
   {
     id: "03",
-    title: "Weather Forecast Dashboard",
-    category: "Frontend",
+    title: "Amazon Prime Clone Deployment",
+    category: "DevOps",
     description:
-      "An interactive weather forecast dashboard that provides real-time weather information and 5-day forecasts for multiple locations. Utilizes a third-party weather API.",
-    stack: ["Vue.js", "Vuex", "Chart.js", "OpenWeatherMap API"],
-    image: projectThree,
+      "A complete DevOps pipeline for deploying an Amazon Prime Clone using AWS and modern CI/CD practices. Implements Infrastructure as Code with Terraform, containerization with Docker, continuous integration with Jenkins, security scanning with Trivy, and automated deployment to AWS EKS with ArgoCD. Includes monitoring and alerting using Prometheus and Grafana.",
+    stack: ["Terraform", "EKS","Jenkins", "Docker","K8s", "Trivy", "Prometheus" ],
+    image: amazonClone,
+    hoverImage: amazonCI, // image shown on hover
     liveUrl: "https://example-weatherapp.com",
     githubUrl: "https://github.com/example/weatherapp",
   },
