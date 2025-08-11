@@ -1,15 +1,10 @@
 import { Facebook, Github, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
-import { FaXTwitter } from 'react-icons/fa6'; // X (Twitter rebrand)
+import { FaXTwitter ,FaMedium} from 'react-icons/fa6'; // X (Twitter rebrand)
 import Link from "next/link";
 import React from "react";
 
 const socialData = [
-  {
-    title: "Youtube",
-    icon: <Youtube width={20} height={20} />,
-    link: "https://youtube.com/@hillaryoyaro", // replace with your actual YouTube
-  },
-  {
+   {
     title: "Github",
     icon: <Github width={20} height={20} />,
     link: "https://github.com/hillaryoyaro",
@@ -24,10 +19,15 @@ const socialData = [
     icon: <FaXTwitter size={20} />,
     link: "https://twitter.com/hillaryoyaroh",
   },
+   {
+    title: "Medium",
+    icon: <FaMedium width={20} height={20} />,
+    link: "https://medium.com/@hillaryoyaroh", // replace with your actual Medium
+  },
   {
     title: "Instagram",
     icon: <Instagram width={20} height={20} />,
-    link: "https://instagram.com/hillaryoyaro", // update this
+    link: "https://instagram.com/hillaryoyaroh", // update this
   },
 ];
 
