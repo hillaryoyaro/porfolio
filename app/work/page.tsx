@@ -65,8 +65,8 @@ const projects = [
     stack: ["Terraform", "EKS","Jenkins", "Docker","K8s", "Trivy", "Prometheus" ],
     image: amazonClone,
     hoverImage: amazonCI, // image shown on hover
-    liveUrl: "https://example-weatherapp.com",
-    githubUrl: "https://github.com/example/weatherapp",
+    liveUrl: "https://amazonprime.com",
+    githubUrl: "https://github.com/hillaryoyaro/Amazon-Prime-Clone-Deployment",
   },
 ];
 
