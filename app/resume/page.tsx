@@ -70,10 +70,10 @@ const tabContent = {
 
       
       {
-        role: "Full Stack Engineer",
+        role: "Full-stack AI Engineer",
         company: "Elloe AI",
         logo: "/images/elloeLogo.png",
-        period: "May 2023 - May 2024",
+        period: "May 2023 - OCt 2024",
         description:
           "Engineered conversational AI chatbot interfaces using React and TypeScript, enhancing user engagement through responsive and accessible designs. Developed and optimized backend systems with Node.js and MongoDB, reducing API latency and ensuring reliable integration with third-party services via RESTful APIs. Collaborated closely with cross-functional teams to deploy scalable solutions on AWS, contributing to the overall system reliability and performance.",
         highlights: ["Node.js", "React", "MongoDB", "AWS","Generative AI", "RESTful APIs", "TypeScript"],
