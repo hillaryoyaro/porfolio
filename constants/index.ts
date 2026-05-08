@@ -19,7 +19,7 @@ export const servicesData = [
     title: "Ecommerce & Blockchain",
     description:
       "Building modern eCommerce platforms with seamless integration of trusted payment gateways like PayPal and M-Pesa. We enable secure, fast, and flexible transactions for global and local customers—bridging digital commerce with everyday convenience",
-    href: "https://emali.vercel.app/",
+    href: "https://emalii.com/",
   },
       {
     _id: "02",
