@@ -80,7 +80,7 @@ const tabContent = {
      {
       role: "Co-founder & Software Engineer",
       company: "Emalii",
-      logo: "/images/emaliLogo.png",
+      logo: "/images/emaliiLogo.PNG",
       period: "December 2024 – Present",
       description:
         "Led the end-to-end development of Emali Express, a full-featured cloud-native eCommerce platform. Architected secure, scalable system architecture and implemented integrations with PayPal, M-Pesa, and Stripe to enable seamless and reliable payment processing. Built and optimized core platform features including inventory management, user authentication, order processing, and transactional workflows. Applied DevOps and MLOps practices including CI/CD automation, containerized deployments, and cloud infrastructure management to ensure high availability, performance, and scalability. Contributed to backend service design using RESTful APIs and implemented secure data handling practices to support reliable production-grade operations.",
@@ -103,16 +103,29 @@ const tabContent = {
       },
 
       
-      {
-        role: "Full-stack AI Engineer",
-        company: "Elloe AI",
-        logo: "/images/elloeLogo.png",
-        period: "May 2023 - OCt 2024",
-        description:
-          "Engineered conversational AI chatbot interfaces using React and TypeScript, enhancing user engagement through responsive and accessible designs. Developed and optimized backend systems with Node.js and MongoDB, reducing API latency and ensuring reliable integration with third-party services via RESTful APIs. Collaborated closely with cross-functional teams to deploy scalable solutions on AWS, contributing to the overall system reliability and performance.",
-        highlights: ["Node.js", "React", "MongoDB", "AWS","Generative AI", "RESTful APIs", "TypeScript"],
-        href: "https://www.elloe.ai/",
-      },
+     {
+      role: "Software Engineer",
+      company: "Elloe AI",
+      logo: "/images/elloeLogo.png",
+      period: "May 2023 - May 2024",
+      description:
+        "Designed and deployed LLM-powered AI systems for omnichannel platforms using Vertex AI and Hugging Face models, enabling scalable and secure conversational AI across web and messaging channels. Implemented end-to-end MLOps workflows covering model deployment, monitoring, versioning, and inference optimization to improve reliability, scalability, and operational efficiency of AI services. Collaborated with DevOps teams to deploy and maintain high-availability cloud infrastructure using Docker, Kubernetes, and CI/CD pipelines in multi-cloud environments. Troubleshot AI agent workflows by translating complex user intents into structured, executable actions, improving response accuracy and automation reliability. Led quality assurance and evaluation of AI-generated outputs to ensure reproducibility, security alignment, and production-grade reliability.",
+  
+      highlights: [
+        "LLMs",
+        "Vertex AI",
+        "Hugging Face",
+        "MLOps",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "Multi-cloud",
+        "AI Systems",
+        "Quality Assurance"
+    ],
+
+      href: "https://www.elloe.ai/"
+    }
     ],
   },
   education: {
