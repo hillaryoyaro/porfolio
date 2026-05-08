@@ -33,14 +33,14 @@ import amazonCI from "@/public/images/amazonCI.png"; // Import the hover image
 const projects = [
   {
     id: "01",
-    title: "Emali Express",
+    title: "Emalii",
     category: "Full Stack",
     description:
-      "A modern e-commerce platform built with Next.js, featuring a responsive design, user authentication, and integration with a headless CMS for seamless content management. The platform supports trusted payment gateways including M-Pesa, Stripe, and PayPal, enabling secure and convenient transactions for both local and global customers.",
-    stack: ["Next.js", "MongodB", "Shadcn","Mpesa API",  "PayPal",, "Aws",],
+      "A cloud-native e-commerce platform built with Next.js, designed with a scalable and responsive architecture. It integrates secure authentication, headless CMS content management, and trusted payment gateways including M-Pesa, Stripe, and PayPal for seamless global transactions. The system is engineered with DevOps and MLOps best practices, featuring CI/CD automation, containerized deployments, monitoring, and reproducible cloud environments for high availability and reliability. It also incorporates AI-powered product discovery capabilities using PyTorch, TensorFlow, FastAPI, and Hugging Face models to enhance user experience through intelligent search and recommendations. Backend services are built using RESTful APIs with robust data handling, security, and performance optimization across distributed cloud systems.",
+    stack: ["Next.js", "MongoDB", "Shadcn UI", "Stripe","Mpesa API",  "PayPal",, "Aws", "Docker", "Kubernetes", "CI/CD", "DevOps", "MLOps", "PyTorch", "TensorFlow", "FastAPI", "Hugging Face"],
     image: emaliexpress, // main image
     hoverImage: mpesacheckout,    // image shown on hover
-    liveUrl: "https://emali.vercel.app/",
+    liveUrl: "https://emalii.com/",
     githubUrl: "https://github.com/Outering-Inc/emaliexpress",
   },
   {
