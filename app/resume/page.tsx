@@ -44,15 +44,27 @@ const tabContent = {
   experience: {
     title: "Professional Experience",
     items: [
+       {
+        role: "DevOps Engineer",
+        company: "Upwork",
+        logo: "/images/upworkLogo.PNG",
+        period: "May 2024 - Present",
+        description:          
+          "Led cloud infrastructure and DevOps engineering initiatives focused on deploying and migrating monolithic systems to AWS using Kubernetes, ensuring 99.95% uptime and strict SLA compliance for enterprise and government-adjacent clients. Implemented end-to-end MLOps workflows for AI applications, including containerized model deployment, CI/CD automation for machine learning pipelines, model monitoring, and scalable inference services using Docker, Kubernetes, and cloud-native tooling. Designed and optimized secure AWS cloud environments by configuring VPC networking, IAM policies, and SSL/TLS secrets management to enhance security, access control, and system resilience. Monitored and troubleshot production infrastructure using CloudWatch, Splunk, Prometheus, and Grafana to ensure high availability and proactive incident detection. Automated infrastructure provisioning and configuration management using Terraform, reducing manual operations by 60% and improving environment consistency and reproducibility.",
+
+        highlights: ["AWS","GCP","DevOps Automation", "CI/CD Pipelines", "Terraform", "NextJs","Cloud Security", "Agile Methodologies", "Docker", "Kubernetes"],
+        href: "https://www.upwork.com/freelancers/~0118bb4bd824012e70?mp_source=share",
+      },
      {
       role: "Co-founder & Software Engineer",
-      company: "EmaliExpress",
+      company: "Emalii",
       logo: "/images/emaliLogo.png",
       period: "December 2024 – Present",
       description:
-        "Led the end-to-end development of Emali Express, a full-featured modern eCommerce platform. Architected secure and scalable systems integrating PayPal, M-Pesa, and Stripe for seamless payments. Built robust inventory management, user authentication, and data protection layers to ensure compliance and user trust. Drove DevOps initiatives using Docker,Kubernetes, CI/CD pipelines, and cloud infrastructure for high availability and performance.",
-      highlights: [ "React","Next.js","TypeScript", "Stripe", "M-Pesa API","DevOps", "CI/CD","Cloud Deployment"],
-      href: "https://emali.vercel.app/",
+        "Led the end-to-end development of Emali Express, a full-featured cloud-native eCommerce platform. Architected secure, scalable system architecture and implemented integrations with PayPal, M-Pesa, and Stripe to enable seamless and reliable payment processing. Built and optimized core platform features including inventory management, user authentication, order processing, and transactional workflows. Applied DevOps and MLOps practices including CI/CD automation, containerized deployments, and cloud infrastructure management to ensure high availability, performance, and scalability. Contributed to backend service design using RESTful APIs and implemented secure data handling practices to support reliable production-grade operations.",
+        
+      highlights: [ "React","Next.js","TypeScript","Paypal", "Stripe", "M-Pesa API","DevOps", "MLOps", "CI/CD", "AWS", "Docker", "Kubernetes", "PyTorch", "TensorFlow", "FastAPI", "Hugging Face"],
+      href: "https://emalii.com/",
         },
     
    
