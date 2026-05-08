@@ -4,7 +4,8 @@ Allow: /
 Disallow: /private/*
 
 # Host
-Host: https://portfoliofive.reactbd.com
+Host: https://hillaryoyaro.vercel.app
 
 # Sitemaps
+Sitemap: https://hillaryoyaro.vercel.app/sitemap.xml
 Sitemap: https://portfoliofive.reactbd.com/sitemap.xml
