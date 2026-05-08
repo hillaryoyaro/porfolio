@@ -44,7 +44,7 @@ const tabContent = {
   experience: {
     title: "Professional Experience",
     items: [
-       {
+      {
         role: "DevOps Engineer",
         company: "Upwork",
         logo: "/images/upworkLogo.PNG",
@@ -54,6 +54,28 @@ const tabContent = {
 
         highlights: ["AWS","GCP","DevOps Automation", "CI/CD Pipelines", "Terraform", "NextJs","Cloud Security", "Agile Methodologies", "Docker", "Kubernetes"],
         href: "https://www.upwork.com/freelancers/~0118bb4bd824012e70?mp_source=share",
+      },
+      {
+        role: "AI Data Quality Reviewer & Evaluator",
+        company: "Appen",
+        logo: "/images/appenLogo.PNG",
+        period: "April 2026 - Present",
+
+        description:
+            "Support AI, NLP, and speech recognition system development by performing high-quality data review, validation, and evaluation across multilingual datasets. Ensure accuracy and consistency in speech transcription, speaker segmentation, timestamp alignment, and annotation workflows to improve model training quality. Collaborate in AI and LLM data pipelines by identifying inconsistencies, enforcing labeling standards, and ensuring dataset reliability for production-grade machine learning systems. Contribute to improving AI model performance through structured data quality assessment and compliance with annotation guidelines.",
+
+        highlights: [
+          "AI Data Quality Evaluation",
+          "NLP & Speech Recognition",
+          "LLM Training Data Support",
+          "Data Annotation Review",
+          "Multilingual Data Processing",
+          "Quality Assurance (QA)",
+          "Dataset Validation",
+          "AI Model Reliability"
+          ],
+
+      href: "https://www.appen.com/"
       },
      {
       role: "Co-founder & Software Engineer",
