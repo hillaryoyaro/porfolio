@@ -44,17 +44,7 @@ const tabContent = {
   experience: {
     title: "Professional Experience",
     items: [
-      {
-        role: "DevOps Engineer",
-        company: "Upwork",
-        logo: "/images/upworkLogo.PNG",
-        period: "May 2024 - Present",
-        description:          
-          "Led cloud infrastructure and DevOps engineering initiatives focused on deploying and migrating monolithic systems to AWS using Kubernetes, ensuring 99.95% uptime and strict SLA compliance for enterprise and government-adjacent clients. Implemented end-to-end MLOps workflows for AI applications, including containerized model deployment, CI/CD automation for machine learning pipelines, model monitoring, and scalable inference services using Docker, Kubernetes, and cloud-native tooling. Designed and optimized secure AWS cloud environments by configuring VPC networking, IAM policies, and SSL/TLS secrets management to enhance security, access control, and system resilience. Monitored and troubleshot production infrastructure using CloudWatch, Splunk, Prometheus, and Grafana to ensure high availability and proactive incident detection. Automated infrastructure provisioning and configuration management using Terraform, reducing manual operations by 60% and improving environment consistency and reproducibility.",
-
-        highlights: ["AWS","GCP","DevOps Automation", "CI/CD Pipelines", "Terraform", "NextJs","Cloud Security", "Agile Methodologies", "Docker", "Kubernetes"],
-        href: "https://www.upwork.com/freelancers/~0118bb4bd824012e70?mp_source=share",
-      },
+   
       {
         role: "AI Data Quality Reviewer & Evaluator",
         company: "Appen",
@@ -77,9 +67,20 @@ const tabContent = {
 
       href: "https://www.appen.com/"
       },
+         {
+        role: "DevOps Engineer",
+        company: "Upwork",
+        logo: "/images/upworkLogo.PNG",
+        period: "May 2024 - Present",
+        description:          
+          "Led cloud infrastructure and DevOps engineering initiatives focused on deploying and migrating monolithic systems to AWS using Kubernetes, ensuring 99.95% uptime and strict SLA compliance for enterprise and government-adjacent clients. Implemented end-to-end MLOps workflows for AI applications, including containerized model deployment, CI/CD automation for machine learning pipelines, model monitoring, and scalable inference services using Docker, Kubernetes, and cloud-native tooling. Designed and optimized secure AWS cloud environments by configuring VPC networking, IAM policies, and SSL/TLS secrets management to enhance security, access control, and system resilience. Monitored and troubleshot production infrastructure using CloudWatch, Splunk, Prometheus, and Grafana to ensure high availability and proactive incident detection. Automated infrastructure provisioning and configuration management using Terraform, reducing manual operations by 60% and improving environment consistency and reproducibility.",
+
+        highlights: ["AWS","GCP","DevOps Automation", "CI/CD Pipelines", "Terraform", "NextJs","Cloud Security", "Agile Methodologies", "Docker", "Kubernetes"],
+        href: "https://www.upwork.com/freelancers/~0118bb4bd824012e70?mp_source=share",
+      },
      {
       role: "Co-founder & Software Engineer",
-      company: "Emalii",
+      company: "Emali",
       logo: "/images/emaliiLogo.PNG",
       period: "December 2024 – Present",
       description:
@@ -87,9 +88,8 @@ const tabContent = {
         
       highlights: [ "React","Next.js","TypeScript","Paypal", "Stripe", "M-Pesa API","DevOps", "MLOps", "CI/CD", "AWS", "Docker", "Kubernetes", "PyTorch", "TensorFlow", "FastAPI", "Hugging Face"],
       href: "https://emalii.com/",
-        },
+      },
     
-   
       {
         role: "DevOps Engineer",
         company: "Outering",
